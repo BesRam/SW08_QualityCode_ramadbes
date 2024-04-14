@@ -2,6 +2,7 @@ package sw08_qualitycode_ramadbes;
 
 public class TicTacToe {
     private char[][] board;
+    private char currentPlayer;
     private final char EMPTY_FIELD = ' ';
 
     public TicTacToe() {
@@ -12,6 +13,7 @@ public class TicTacToe {
                 this.board[i][j] = EMPTY_FIELD;
             }
         }
+        this.currentPlayer = 'X'; // X beginnt immer
     }
 
     public boolean isBoardEmpty() {
@@ -23,5 +25,9 @@ public class TicTacToe {
             }
         }
         return true; // Alle Felder sind leer
+    }
+
+    public char getCurrentPlayer() {
+        return this.currentPlayer;
     }
 }
